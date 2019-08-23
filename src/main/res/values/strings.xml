@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WakeMeUp</string>
+    
+    <!-- Clipboard -->
+    <string name="copy">Copy</string>
+    <string name="paste">Paste</string>
+    <string name="cut">Cut</string>
+       <string name="close">Close</string>
+    <string name="selectall">Select All</string>
+    <string name="selectword">Select Word</string>
+ 
+    <string name="needupdate">It is need to update.\nAfter completing, Please restart.</string>
+    <string name="loadingFail">First loading is fail.\nPlease restart.</string>
+    <string name="updateFail">Update is fail. \nPlease restart.</string>
+    <string name="notexist">Start file is NOT exist. \nPlease restart.</string>
+    <string name="BeingUpdated">Being updated.</string>
+    <string name="wantreplace">There is a file of the save name. Do you want to replace? </string>
+    <string name="fd_ok">OK</string>
+    <string name="fd_cancel">Cancel</string>
+    <string name="move">Move</string>
+    <string name="upper">Upper</string>
+    <string name="filter">Filter</string>
+    <string name="home">Home</string>
+    <string name="nofilename">No File Name.</string>     
+    <string name="checkforupdates">Check for updates.</string>   
+    <string name="installforupdates">Install for updates.</string>  
+    <string name="downloadingforupdates">Downloading for updates.</string>    
+    <string name="force_close">Update is Completed.</string> 
+    <string name="LoadingPleaseWait">Loading... \nPlease Wait...</string>
+    
+    <!-- Accessibility reaction -->
+    <string name="listitem_description">%1$d of %2$d %3$s</string>
+    <string name="listitem_selected_description">%1$d of %2$d selected %3$s</string>
+    <string name="image_description">%1$s image</string>
+    <string name="list_description">%1$s selected</string>
+    <string name="editing_description">editing. %1s</string>
+    <string name="link_description">%1$s link</string>
+    <string name="editing_insert_description">%1$s</string>
+    <string name="editing_delete_description">%1$s deleted</string>
+    <string name="spacebar">spacebar</string>
+    
+    <!-- Splash message  -->
+    <string name="start_initialize">Start Initialize</string> 
+    <string name="check_license">Check License</string>
+    <string name="load_frameworkmodule">Load Framework Module</string>
+    <string name="load_extendmodule">Load Extend Module</string>
+    <string name="execute_frameworkscript">Execute Framework Script</string>
+    <string name="load_application">Load Application</string>
+    <string name="load_failapplication">Load Fail Application Initialize. Click And Close</string>
+
+    <string name="Init_nexacro_engine">Initialize Nexacro engine</string>
+    <string name="loading_application">Load the application (loading the application)</string>
+    <string name="executing_framework">Load the application (executing the framework)</string>
+    <string name="load_bootstrap">Load the application (bootstrapping)</string>
+  
+    <!-- Confirm  -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- VideoPlayer -->
+    <!-- Shown on transport control of lockscreen. Pressing button goes to previous track. -->
+    <string name="lockscreen_transport_prev_description">Previous track</string>
+    <!-- Shown on transport control of lockscreen. Pressing button goes to next track. -->
+    <string name="lockscreen_transport_next_description">Next track</string>
+    <!-- Shown on transport control of lockscreen. Pressing button pauses playback -->
+    <string name="lockscreen_transport_pause_description">Pause</string>
+    <!-- Shown on transport control of lockscreen. Pressing button pauses playback -->
+    <string name="lockscreen_transport_play_description">Play</string>
+    <!-- Shown on transport control of lockscreen. Pressing button pauses playback -->
+    <string name="lockscreen_transport_stop_description">Stop</string>
+    <!-- Shown on transport control screens. Pressing button rewinds playback [CHAR LIMIT=NONE]-->
+    <string name="lockscreen_transport_rew_description">Rewind</string>
+    <!-- Shown on transport control screens. Pressing button fast forwards playback [CHAR LIMIT=NONE]-->
+    <string name="lockscreen_transport_ffw_description">Fast forward</string>
+</resources>

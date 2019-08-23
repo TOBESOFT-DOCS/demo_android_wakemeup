@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gvr-libs-common/gvr-libs-common.iml" filepath="$PROJECT_DIR$/gvr-libs-common/gvr-libs-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gvr-libs-commonwidget/gvr-libs-commonwidget.iml" filepath="$PROJECT_DIR$/gvr-libs-commonwidget/gvr-libs-commonwidget.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gvr-libs-videowidget/gvr-libs-videowidget.iml" filepath="$PROJECT_DIR$/gvr-libs-videowidget/gvr-libs-videowidget.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wakemeup.iml" filepath="$PROJECT_DIR$/wakemeup.iml" />
+    </modules>
+  </component>
+</project>

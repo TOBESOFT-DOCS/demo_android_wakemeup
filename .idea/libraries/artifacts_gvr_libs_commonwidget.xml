@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="artifacts:gvr-libs-commonwidget">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/commonwidget.aar/f4ca14c4e679a3d995341dc5d52f3eee/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/commonwidget.aar/f4ca14c4e679a3d995341dc5d52f3eee/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

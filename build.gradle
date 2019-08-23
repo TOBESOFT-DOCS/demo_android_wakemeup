@@ -1,0 +1,102 @@
+buildscript {
+    repositories {
+    	/* performance (mavenCentral() -> jcenter() <used CDN>) */
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        // classpath 'com.google.gms:google-services:4.0.1'
+       
+    }
+} 
+apply plugin: 'com.android.application'
+
+android {
+   
+    def versionPropsFile = file('version.properties')
+    def versionBuild
+
+    /*Setting default value for versionBuild which is the last incremented value stored in the file */
+    if (versionPropsFile.canRead()) {
+        def Properties versionProps = new Properties()
+        versionProps.load(new FileInputStream(versionPropsFile))
+        versionBuild = versionProps['VERSION_BUILD'].toInteger()
+    } else {
+        throw new GradleException("Could not read version.properties!")
+    }
+
+    /*Wrapping inside a method avoids auto incrementing on every gradle task run. Now it runs only when we build apk*/
+    ext.autoIncrementBuildNumber = {
+        if (versionPropsFile.canRead()) {
+            def Properties versionProps = new Properties()
+            versionProps.load(new FileInputStream(versionPropsFile))
+            versionBuild = versionProps['VERSION_BUILD'].toInteger() + 1
+            versionProps['VERSION_BUILD'] = versionBuild.toString()
+            versionProps.store(versionPropsFile.newWriter(), null)
+        } else {
+            throw new GradleException("Could not read version.properties!")
+        }
+    }
+   
+    compileSdkVersion 26
+    buildToolsVersion "28.0.3"
+   
+    defaultConfig {
+        applicationId "com.demo.wakemeup"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode versionBuild
+        multiDexEnabled true
+    }   
+    buildTypes {
+        release {
+            minifyEnabled false
+				    proguardFile getDefaultProguardFile('proguard-android.txt')
+        }
+        debug {
+            minifyEnabled false
+				    proguardFile getDefaultProguardFile('proguard-android.txt')
+        }
+    }
+    
+    // Hook to check if the release/debug task is among the tasks to be executed.
+    //Let's make use of it
+    gradle.taskGraph.whenReady {taskGraph ->
+        if (taskGraph.hasTask(assembleDebug)) {  /* when run debug task */
+            autoIncrementBuildNumber()
+        } else if (taskGraph.hasTask(assembleRelease)) { /* when run release task */
+            autoIncrementBuildNumber()
+        }
+    }
+    
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':gvr-libs-videowidget')
+    implementation project(':gvr-libs-commonwidget')
+    implementation project(':gvr-libs-common')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:design:23.4.0'
+    implementation 'com.android.support:multidex:1.0.1'
+    // implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    // implementation 'com.google.android.gms:play-services-location:16.0.0'
+    // implementation 'com.google.firebase:firebase-core:16.0.6'
+    // implementation 'com.google.firebase:firebase-messaging:17.3.4'
+  
+}
+
+// apply plugin: 'com.google.gms.google-services'
+
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}

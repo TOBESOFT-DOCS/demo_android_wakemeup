@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WakeMeUp</string>
+    
+    <!-- Clipboard -->
+    <string name="copy">コピー</string>
+    <string name="paste">貼り付け</string>
+    <string name="cut">カット</string>
+    <string name="close">Close</string>
+    <string name="selectall">全て選択</string>
+    <string name="selectword">単語選択</string>
+    
+    <string name="needupdate">アップデートがあります。\n完了した後に, 再起動してください。</string>
+    <string name="loadingFail">初期ロードに失敗しました。\n再起動してください。</string>
+    <string name="updateFail">アップデートが失敗しました。\n再起動してください。</string>
+    <string name="notexist">起動ファイルがありません。\n再起動してください。</string>
+    <string name="BeingUpdated">アップデート中です。</string>
+    <string name="wantreplace">同一のファイル名があります。上書きしますか？</string>
+    <string name="fd_ok">確認</string>
+    <string name="fd_cancel">キャンセル</string>
+    <string name="move">移動</string>
+    <string name="upper">上位</string>
+    <string name="filter">フィルター</string>
+    <string name="home">ホーム</string>
+    <string name="nofilename">ファイル名がありません。</string>    
+    <string name="checkforupdates">アップデート確認中です。</string>     
+    <string name="installforupdates">アップデート設置中です。</string>  
+   	<string name="downloadingforupdates">アップデートダウン中です。</string>    
+   	<string name="force_close">アップデートが完了しました。</string>   
+   	<string name="LoadingPleaseWait">ローディング 。。。\nお待ちください。</string>
+
+    <!-- Accessibility reaction -->
+    <string name="listitem_description">%1$d of %2$d %3$s</string>
+    <string name="listitem_selected_description">%1$d of %2$d selected %3$s</string>
+    <string name="image_description">%1$s image</string>
+    <string name="list_description">%1$s selected</string>
+    <string name="editing_description">editing. %1s</string>
+    <string name="link_description">%1$s link</string>
+    <string name="editing_insert_description">%1$s</string>
+    <string name="editing_delete_description">%1$s deleted</string>
+    <string name="spacebar">spacebar</string>
+
+   	     <!-- Splash message  -->
+    <string name="start_initialize">初期化</string> 
+    <string name="check_license">ライセンスチェック</string>
+    <string name="load_frameworkmodule">フレームワークモジュールのロード</string>
+    <string name="load_extendmodule">拡張モジュールロード</string>
+    <string name="execute_frameworkscript">フレームワークスクリプトの実行</string>
+    <string name="load_application">応用プログラムロード</string>
+    <string name="load_failapplication">ADLファイルロード失敗. クリックすると閉じます</string>
+
+    <string name="Init_nexacro_engine">Initialize Nexacro engine</string>
+    <string name="loading_application">Load the application (loading the application)</string>
+    <string name="executing_framework">Load the application (executing the framework)</string>
+    <string name="load_bootstrap">Load the application (bootstrapping)</string>
+  
+  <!-- Confirm  -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- VideoPlayer -->
+    <!-- Shown on transport control of lockscreen. Pressing button goes to previous track. -->
+    <string name="lockscreen_transport_prev_description">Previous track</string>
+    <!-- Shown on transport control of lockscreen. Pressing button goes to next track. -->
+    <string name="lockscreen_transport_next_description">Next track</string>
+    <!-- Shown on transport control of lockscreen. Pressing button pauses playback -->
+    <string name="lockscreen_transport_pause_description">Pause</string>
+    <!-- Shown on transport control of lockscreen. Pressing button pauses playback -->
+    <string name="lockscreen_transport_play_description">Play</string>
+    <!-- Shown on transport control of lockscreen. Pressing button pauses playback -->
+    <string name="lockscreen_transport_stop_description">Stop</string>
+    <!-- Shown on transport control screens. Pressing button rewinds playback [CHAR LIMIT=NONE]-->
+    <string name="lockscreen_transport_rew_description">Rewind</string>
+    <!-- Shown on transport control screens. Pressing button fast forwards playback [CHAR LIMIT=NONE]-->
+    <string name="lockscreen_transport_ffw_description">Fast forward</string>
+</resources>

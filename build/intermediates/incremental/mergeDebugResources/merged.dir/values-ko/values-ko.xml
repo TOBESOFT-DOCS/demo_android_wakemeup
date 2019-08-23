@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="BeingUpdated">업데이트 중입니다.</string>
+    <string name="Init_nexacro_engine">넥사크로 엔진을 초기화 합니다.</string>
+    <string name="LoadingPleaseWait">로딩중입니다..\n잠시만 기다려주세요...</string>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"홈 탐색"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"위로 탐색"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"옵션 더보기"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"완료"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"전체 보기"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"앱 선택"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"사용 안함"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"사용"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"검색..."</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"검색어 삭제"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"검색어"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"검색"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"검색어 보내기"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"음성 검색"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"공유 대상"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"%s와(과) 공유"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"접기"</string>
+    <string name="app_name">WakeMeUp</string>
+    <string msgid="7991510501576515350" name="back_button_content_description">"뒤로"</string>
+    <string name="cancel">아니오</string>
+    <string msgid="5437310423659570107" name="cancel_button">"취소"</string>
+    <string name="check_license">Check License</string>
+    <string name="checkforupdates">업데이트 확인 중입니다.</string>
+    <string name="close">닫기</string>
+    <string name="copy">복사하기</string>
+    <string name="cut">잘라내기</string>
+    <string msgid="8936160057500596687" name="dialog_message_no_cardboard">"뷰어를 설정하려면 Cardboard 앱을 받으세요."</string>
+    <string msgid="6627029590803109915" name="dialog_message_setup">"최적의 경험을 위해 뷰어를 설정하세요."</string>
+    <string msgid="3248614679403583554" name="dialog_title">"설정"</string>
+    <string msgid="64877516357481593" name="dialog_title_warning">"경고"</string>
+    <string msgid="5792956538580418330" name="dialog_vr_core_not_enabled">"Google VR 서비스가 사용 설정되어 있지 않으면 이 애플리케이션이 제대로 작동하지 않을 수 있습니다. 계속하려면 전화 설정에 이 서비스를 사용 설정하세요."</string>
+    <string msgid="2625827230415478591" name="dialog_vr_core_not_installed">"Google VR 서비스가 없으면 이 애플리케이션이 제대로 작동하지 않을 수 있습니다. 계속하려면 Play 스토어에서 Google VR 서비스를 설치하세요."</string>
+    <string name="downloadingforupdates">업데이트 다운 중입니다.</string>
+    <string name="editing_delete_description">%1$s 삭제됨</string>
+    <string name="editing_description">입력상자 현재 수정 중 입니다. %1s</string>
+    <string name="editing_insert_description">%1$s</string>
+    <string name="execute_frameworkscript">Execute Framework Script</string>
+    <string name="executing_framework">어플리케이션을 로딩합니다. ( 프레임워크 실행 )</string>
+    <string name="fd_cancel">취소</string>
+    <string name="fd_ok">확인</string>
+    <string name="filter">필터</string>
+    <string name="force_close">업데이트가 되었습니다.</string>
+    <string msgid="8365361659814172105" name="go_to_playstore_button">"Play 스토어로 이동"</string>
+    <string msgid="7232070790833049562" name="go_to_vr_listeners_settings_button">"설정으로 이동"</string>
+    <string name="home">홈</string>
+    <string name="image_description">%1$s 이미지</string>
+    <string name="installforupdates">업데이트 설치 중입니다.</string>
+    <string name="link_description">%1$s 링크</string>
+    <string name="list_description">%1$s 선택됨</string>
+    <string name="listitem_description">%1$d 중에 %2$d, %3$s</string>
+    <string name="listitem_selected_description">%1$d 중에 %2$d, 선택됨, %3$s</string>
+    <string name="load_application">Load Application</string>
+    <string name="load_bootstrap">Load the application (bootstrapping)</string>
+    <string name="load_extendmodule">Load Extend Module</string>
+    <string name="load_failapplication">Load Fail Application Initialize. Click And Close</string>
+    <string name="load_frameworkmodule">Load Framework Module</string>
+    <string name="loadingFail">초기 로딩이 실패하였습니다. \n재시작 해 주세요.</string>
+    <string name="loading_application">어플리케이션을 로딩합니다. ( 어플리케이션 로딩 )</string>
+    <string name="lockscreen_transport_ffw_description">Fast forward</string>
+    <string name="lockscreen_transport_next_description">Next track</string>
+    <string name="lockscreen_transport_pause_description">Pause</string>
+    <string name="lockscreen_transport_play_description">Play</string>
+    <string name="lockscreen_transport_prev_description">Previous track</string>
+    <string name="lockscreen_transport_rew_description">Rewind</string>
+    <string name="lockscreen_transport_stop_description">Stop</string>
+    <string name="move">이동</string>
+    <string name="needupdate">업데이트가 있습니다. \n완료 후 재시작 해 주세요.</string>
+    <string msgid="4242663779247493666" name="no_browser_text">"웹사이트를 열 브라우저가 없습니다."</string>
+    <string name="nofilename">파일명이 없습니다.</string>
+    <string name="notexist">구동에 필요한 파일이 없습니다. \n재시작 해 주세요.</string>
+    <string name="ok">예</string>
+    <string name="paste">붙여넣기</string>
+    <string msgid="3033913737471886041" name="place_your_phone_into_cardboard">"Cardboard 뷰어에 스마트폰을 넣습니다."</string>
+    <string msgid="8644661894594395876" name="place_your_viewer_into_viewer_format">"스마트폰을 <ns1:g id="VIEWER_NAME">%s</ns1:g> 뷰어에 삽입하세요."</string>
+    <string msgid="146198913615257606" name="search_menu_title">"검색"</string>
+    <string name="selectall">전체선택</string>
+    <string name="selectword">단어선택</string>
+    <string msgid="7565578605458926311" name="settings_button_content_description">"설정"</string>
+    <string msgid="1112346456654686733" name="setup_button">"설정"</string>
+    <string name="spacebar">스페이스바</string>
+    <string name="start_initialize">Start Initialize</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="1762411366348526647" name="switch_viewer_action">"변경"</string>
+    <string msgid="4518576606713444785" name="switch_viewer_prompt">"뷰어를 변경할까요?"</string>
+    <string name="updateFail">업데이트가 실패하였습니다. \n재시작 해 주세요.</string>
+    <string name="upper">상위</string>
+    <string name="wantreplace">동일한 파일이 이미 존재합니다. 바꾸시겠습니까?</string>
+</resources>

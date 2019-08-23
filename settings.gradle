@@ -1,0 +1,1 @@
+include ':gvr-libs-videowidget', ':gvr-libs-common', ':gvr-libs-commonwidget'
