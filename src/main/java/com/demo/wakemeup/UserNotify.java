@@ -11,6 +11,7 @@ import com.nexacro.NexacroActivity;
 import com.nexacro.event.NexacroEventHandler;
 
 import java.util.Calendar;
+import java.util.Locale;
 
 import static android.content.Context.ALARM_SERVICE;
 
@@ -114,21 +115,12 @@ public class UserNotify implements NexacroEventHandler {
                 alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, bTime, oneday, pendingIntent);
                 //alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
 
-
-
-                Toast.makeText(this.context,"알람 예정 시간은 " +
-                        calendar.get(Calendar.YEAR) + "년 " +
-                        (calendar.get(Calendar.MONTH)+1) + "월 " +
-                        calendar.get(Calendar.DATE) + "일 " +
-                        calendar.get(Calendar.HOUR_OF_DAY) + "시 " +
-                        calendar.get(Calendar.MINUTE) + "분", Toast.LENGTH_SHORT).show();
-
-                Log.i("UserNotify", "calendar.get: "+
-                        calendar.get(Calendar.YEAR) + "년 " +
-                        (calendar.get(Calendar.MONTH)+1) + "월 " +
-                        calendar.get(Calendar.DATE) + "일 " +
-                        calendar.get(Calendar.HOUR_OF_DAY) + "시 " +
-                        calendar.get(Calendar.MINUTE) + "분");
+                Toast.makeText(this.context,"This alarm will ring at " +
+                        calendar.getDisplayName((Calendar.MONTH+1), Calendar.LONG, Locale.getDefault()) + " " +
+                        calendar.get(Calendar.DATE) + ", " +
+                        calendar.get(Calendar.YEAR) + " " +
+                        calendar.get(Calendar.HOUR_OF_DAY) + ":" +
+                        calendar.get(Calendar.MINUTE), Toast.LENGTH_SHORT).show();
 
 
                 if(nActivity != null) {
@@ -142,8 +134,6 @@ public class UserNotify implements NexacroEventHandler {
             case 102:   //Alarm OFF
                 Log.i("UserNotify", "case 102 Alarm OFF: "+ strMessage);
 
-                Toast.makeText(this.context,"알람 종료", Toast.LENGTH_SHORT).show();
-
                 //알람매니저 취소
                 alarmManager.cancel(pendingIntent);
 
@@ -151,6 +141,8 @@ public class UserNotify implements NexacroEventHandler {
 
                 //서비스로 ALARMOFF 전달하여 알람음 재생 stop
                 this.context.sendBroadcast(alarmIntent);
+
+                Toast.makeText(this.context,"Alarm has been stopped", Toast.LENGTH_SHORT).show();
 
                 if(nActivity != null) {
                     nActivity.callScript("fn_callScript('ALARMOFF')");
@@ -173,11 +165,13 @@ public class UserNotify implements NexacroEventHandler {
                     alarmManager.cancel(cancelSender);
                     cancelSender.cancel();
 
-                    strMsg = "설정된 알람을 취소했습니다.";
+                    strMsg = "Alarm has been cancelled";
                 }
                 else {
-                    strMsg = "취소할 알람이 없습니다.";
+                    strMsg = "No alarm is found";
                 }
+
+                Toast.makeText(this.context, strMsg, Toast.LENGTH_SHORT).show();
 
                 if(nActivity != null) {
                     nActivity.callScript("fn_callScript('"+ strMsg +"')");
@@ -194,11 +188,13 @@ public class UserNotify implements NexacroEventHandler {
                 PendingIntent checkSender = PendingIntent.getBroadcast(this.context, 0, checkIntent, PendingIntent.FLAG_NO_CREATE);
 
                 if(checkSender == null) {
-                    strMsg = "설정된 알람이 없습니다.";
+                    strMsg = "Alarm is found";
                 }
                 else {
-                    strMsg = "설정된 알람이 있습니다.";
+                    strMsg = "No alarm is found";
                 }
+
+                Toast.makeText(this.context, strMsg, Toast.LENGTH_SHORT).show();
 
                 if(nActivity != null) {
                     nActivity.callScript("fn_callScript('"+ strMsg +"')");

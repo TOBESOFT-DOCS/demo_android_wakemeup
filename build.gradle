@@ -1,13 +1,13 @@
 buildscript {
     repositories {
-    	/* performance (mavenCentral() -> jcenter() <used CDN>) */
+        /* performance (mavenCentral() -> jcenter() <used CDN>) */
         jcenter()
         google()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.1'
         // classpath 'com.google.gms:google-services:4.0.1'
-       
+
     }
 } 
 apply plugin: 'com.android.application'
@@ -69,11 +69,12 @@ android {
             autoIncrementBuildNumber()
         }
     }
-    
+
     lintOptions {
         checkReleaseBuilds false
         abortOnError false
     }
+    sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/raw2'] } }
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -88,7 +89,7 @@ dependencies {
     // implementation 'com.google.android.gms:play-services-location:16.0.0'
     // implementation 'com.google.firebase:firebase-core:16.0.6'
     // implementation 'com.google.firebase:firebase-messaging:17.3.4'
-  
+
 }
 
 // apply plugin: 'com.google.gms.google-services'
