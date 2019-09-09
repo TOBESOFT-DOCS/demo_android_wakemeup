@@ -58,29 +58,21 @@ public class UserNotify implements NexacroEventHandler {
 
         switch(nNotifyID)
         {
-            case 101:   //Alarm Setting
+            case 101:   //Alarm SET
                 Log.i("UserNotify", "case 101 Alarm Setting: "+ strMessage);
 
                 //strMessage="2019,5,29,18,17"
-                final int intYear, intMonth, intDay, intHour, intMin;
                 String[] strRecvTime = strMessage.split(",", 5);
-
-                intYear = Integer.parseInt(strRecvTime[0]);
-                intMonth = Integer.parseInt(strRecvTime[1]);
-                intDay = Integer.parseInt(strRecvTime[2]);
-                intHour = Integer.parseInt(strRecvTime[3]);
-                intMin = Integer.parseInt(strRecvTime[4]);
-
 
                 // Calendar 객체 생성
                 final Calendar calendar = Calendar.getInstance();
 
                 // calendar에 시간 셋팅
-                calendar.set(Calendar.YEAR, intYear);
-                calendar.set(Calendar.MONTH, intMonth-1);
-                calendar.set(Calendar.DATE, intDay);
-                calendar.set(Calendar.HOUR_OF_DAY, intHour);
-                calendar.set(Calendar.MINUTE, intMin);
+                calendar.set(Calendar.YEAR, Integer.parseInt(strRecvTime[0]));
+                calendar.set(Calendar.MONTH, Integer.parseInt(strRecvTime[1])-1);
+                calendar.set(Calendar.DATE, Integer.parseInt(strRecvTime[2]));
+                calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(strRecvTime[3]));
+                calendar.set(Calendar.MINUTE, Integer.parseInt(strRecvTime[4]));
                 calendar.set(Calendar.SECOND, 0);
 
                 // reveiver에 string 값 넘겨주기
@@ -99,7 +91,6 @@ public class UserNotify implements NexacroEventHandler {
                         ", this.context: "+ this.context +
                         ", this.context.getApplicationContext(): "+ this.context.getApplicationContext());
 
-
                 // 알람 반복 셋팅
                 long aTime = System.currentTimeMillis();
                 long bTime = calendar.getTimeInMillis();
@@ -115,22 +106,21 @@ public class UserNotify implements NexacroEventHandler {
                 alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, bTime, oneday, pendingIntent);
                 //alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
 
-                Toast.makeText(this.context,"This alarm will ring at " +
+                strMsg = "This alarm will ring at " +
                         calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.ENGLISH) + " " +
                         calendar.get(Calendar.DATE) + ", " +
                         calendar.get(Calendar.YEAR) + " " +
                         calendar.get(Calendar.HOUR_OF_DAY) + ":" +
-                        calendar.get(Calendar.MINUTE), Toast.LENGTH_SHORT).show();
+                        calendar.get(Calendar.MINUTE);
 
                 if(nActivity != null) {
-                    nActivity.callScript("fn_callScript('ALARMON')");
+                    nActivity.callScript("fn_callScript('ALARMON', '"+strMsg+"')");
                 }
 
                 break;
 
             case 102:   //Alarm OFF
                 Log.i("UserNotify", "case 102 Alarm OFF: "+ strMessage);
-                strMsg = "Alarm has been stopped";
 
                 //알람매니저 취소
                 alarmManager.cancel(pendingIntent);
@@ -139,10 +129,8 @@ public class UserNotify implements NexacroEventHandler {
                 //서비스로 ALARMOFF 전달하여 알람음 재생 stop
                 this.context.sendBroadcast(alarmIntent);
 
-                Toast.makeText(this.context, strMsg, Toast.LENGTH_SHORT).show();
-
                 if(nActivity != null) {
-                    nActivity.callScript("fn_callScript('ALARMOFF')");
+                    nActivity.callScript("fn_callScript('ALARMOFF', '"+strMsg+"')");
                 }
 
                 break;
@@ -153,23 +141,18 @@ public class UserNotify implements NexacroEventHandler {
                 Intent cancelIntent = new Intent(this.context, AlarmReceiver.class);
                 PendingIntent cancelSender = PendingIntent.getBroadcast(this.context, 0, cancelIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-                Log.i("UserNotify", "cancelIntent: "+ cancelIntent);
-                Log.i("UserNotify", "sender: "+ cancelSender);
-
                 if(cancelSender != null) {
                     alarmManager.cancel(cancelSender);
                     cancelSender.cancel();
 
-                    strMsg = "Alarm has been cancelled";
+                    if(nActivity != null) {
+                        nActivity.callScript("fn_callScript('ALARMCANCEL', '"+strMsg+"')");
+                    }
                 }
                 else {
-                    strMsg = "No alarm is found";
-                }
-
-                Toast.makeText(this.context, strMsg, Toast.LENGTH_SHORT).show();
-
-                if(nActivity != null) {
-                    nActivity.callScript("fn_callScript('ALARMCANCEL')");
+                    if(nActivity != null) {
+                        nActivity.callScript("fn_callScript('NOALARM', '"+strMsg+"')");
+                    }
                 }
 
                 break;
@@ -181,16 +164,14 @@ public class UserNotify implements NexacroEventHandler {
                 PendingIntent checkSender = PendingIntent.getBroadcast(this.context, 0, checkIntent, PendingIntent.FLAG_NO_CREATE);
 
                 if(checkSender == null) {
-                    strMsg = "No alarm is found";
+                    if(nActivity != null) {
+                        nActivity.callScript("fn_callScript('NOALARM', '"+strMsg+"')");
+                    }
                 }
                 else {
-                    strMsg = "Alarm is found";
-                }
-
-                Toast.makeText(this.context, strMsg, Toast.LENGTH_SHORT).show();
-
-                if(nActivity != null) {
-                    nActivity.callScript("fn_callScript('ALARMCHECK')");
+                    if(nActivity != null) {
+                        nActivity.callScript("fn_callScript('ALARMCHECK', '"+strMsg+"')");
+                    }
                 }
 
                 break;
@@ -222,11 +203,20 @@ public class UserNotify implements NexacroEventHandler {
                 */
                 break;
 
+            case 1001:  //TOAST message
+                showToast(strMessage);
+                break;
+
             default:
                 Log.i("UserNotify", "Unknown nNotifyID: "+ nNotifyID);
 
         }//end of switch(nNotifyID)
 
+    }//end of onUserNotify
 
+
+    public void showToast(String strMessage) {
+        Toast.makeText(this.context, strMessage, Toast.LENGTH_LONG).show();
     }
+
 }
