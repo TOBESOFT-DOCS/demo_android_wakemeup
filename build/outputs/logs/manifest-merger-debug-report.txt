@@ -202,15 +202,17 @@ MERGED from [com.android.support:support-compat:26.1.0] C:\Users\tobezizon\.grad
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\tobezizon\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\3d5d1a590364cd5f05b60c9b228a8a5e\AndroidManifest.xml:24:5-28:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\tobezizon\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\3d5d1a590364cd5f05b60c9b228a8a5e\AndroidManifest.xml:24:5-28:19
 	android:label
-		ADDED from D:\Project\Android\wakemeup\src\main\AndroidManifest.xml:36:105-137
+		ADDED from D:\Project\Android\wakemeup\src\main\AndroidManifest.xml:36:141-173
 	android:hasCode
-		ADDED from D:\Project\Android\wakemeup\src\main\AndroidManifest.xml:36:45-67
+		ADDED from D:\Project\Android\wakemeup\src\main\AndroidManifest.xml:36:81-103
 	android:icon
-		ADDED from D:\Project\Android\wakemeup\src\main\AndroidManifest.xml:36:68-104
+		ADDED from D:\Project\Android\wakemeup\src\main\AndroidManifest.xml:36:104-140
 	android:allowBackup
 		ADDED from D:\Project\Android\wakemeup\src\main\AndroidManifest.xml:36:18-44
 	android:theme
-		ADDED from D:\Project\Android\wakemeup\src\main\AndroidManifest.xml:36:138-169
+		ADDED from D:\Project\Android\wakemeup\src\main\AndroidManifest.xml:36:174-205
+	android:usesCleartextTraffic
+		ADDED from D:\Project\Android\wakemeup\src\main\AndroidManifest.xml:36:45-80
 activity#com.demo.wakemeup.MainActivity
 ADDED from D:\Project\Android\wakemeup\src\main\AndroidManifest.xml:37:9-42:20
 	android:label

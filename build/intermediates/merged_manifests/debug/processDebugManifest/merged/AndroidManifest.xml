@@ -57,7 +57,8 @@
         android:hasCode="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true" >
         <activity
             android:name="com.demo.wakemeup.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

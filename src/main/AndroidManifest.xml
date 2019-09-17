@@ -33,7 +33,7 @@
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.BLUETOOTH"/>
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-    <application android:allowBackup="true" android:hasCode="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme">
+    <application android:allowBackup="true" android:usesCleartextTraffic="true" android:hasCode="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme">
         <activity android:configChanges="orientation|keyboardHidden|screenSize" android:label="@string/app_name" android:theme="@style/Theme.AppCompat.NoActionBar" android:name="com.demo.wakemeup.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
